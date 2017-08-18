@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/../src/Swoole/Async/ZMQ.php';
 
-$sub = new Swoole\Component\ZMQ(ZMQ::SOCKET_SUB);
+$sub = new Swoole\Async\ZMQ(ZMQ::SOCKET_SUB);
 
 $sub->on('Message', function ($msg)
 {
@@ -11,7 +11,7 @@ $sub->on('Message', function ($msg)
 $sub->bind('tcp://0.0.0.0:5556');
 $sub->subscribe('foo');
 
-$pub = new Swoole\Component\ZMQ(ZMQ::SOCKET_PUB);
+$pub = new Swoole\Async\ZMQ(ZMQ::SOCKET_PUB);
 $pub->connect('tcp://127.0.0.1:5556');
 
 Swoole\Timer::tick(1000, function () use ($pub)
