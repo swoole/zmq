@@ -14,6 +14,10 @@ The recommended way to install swoole/zmq is [through composer](http://getcompos
 }
 ```
 
+```shell
+composer require swoole/zmq
+```
+
 ## Example
 
 And don't forget to autoload:
