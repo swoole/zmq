@@ -1,8 +1,6 @@
 <?php
 namespace Swoole\Async;
 
-use Symfony\Component\Console\Exception\RuntimeException;
-
 class ZMQ
 {
     /**
@@ -223,7 +221,7 @@ class ZMQ
 }
 
 
-class ZMQException extends RuntimeException
+class ZMQException extends \RuntimeException
 {
 
 }
