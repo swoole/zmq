@@ -144,7 +144,7 @@ class ZMQ
         {
             $events = $this->socket->getSockOpt(\ZMQ::SOCKOPT_EVENTS);
 
-            $hasEvents = ($events & \ZMQ::POLL_IN) || ($events & \ZMQ::POLL_OUT && $this->buffer->listening);
+            $hasEvents = ($events & \ZMQ::POLL_IN) || ($events & \ZMQ::POLL_OUT && $this->listening);
             if (!$hasEvents)
             {
                 break;

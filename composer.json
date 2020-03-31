@@ -12,7 +12,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Swoole\\Async\\": "src"
+            "Swoole\\Async\\": "src/Swoole/Async/"
         }
     }
 }
